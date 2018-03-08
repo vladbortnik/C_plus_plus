@@ -10,11 +10,9 @@ void swap(int &x, int &y){
 
 template <typename T>
 void selection_sort(T a [], int n){
-	T smallest;
-	int index;
 	for(int i=0; i<n-1; i++){
-		smallest = a[i];
-		index = i;
+		T smallest = a[i];
+		int index = i;
 		for(int j=i+1; j<n; j++){
 			if(a[j] < smallest){
 				smallest = a[j];
