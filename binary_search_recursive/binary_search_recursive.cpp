@@ -2,12 +2,18 @@
 #include <iomanip>
 using namespace std;
 
-bool birary_search_rec(int a[], int from, int to, int target){
+void swap(int &x, int &y){
+	int temp = x;
+	x = y;
+	y = temp;
+}
+
+int birary_search_rec(int a[], int from, int to, int target){
 	int middleIndex = (from + to)/2;
 	if(from >= to)
-		return false;
+		return -1;
 	if(target == a[middleIndex])
-		return true;
+		return middleIndex;
 	else if(target > a[middleIndex])
 		return birary_search_rec(a, middleIndex + 1, to, target);
 	else
@@ -32,12 +38,6 @@ void print_array(int a[], int n){
 		}
 	}
 	cout << endl;
-}
-
-void swap(int &x, int &y){
-	int temp = x;
-	x = y;
-	y = temp;
 }
 
 void sort(int a[], int n){
@@ -66,7 +66,7 @@ int main(){
 	sort(a, n);
 	print_array(a, n);
 	
-	bool result = birary_search_rec(a, 0, n, x);
+	int result = birary_search_rec(a, 0, n, x);
 	
 	cout << "\n\nBinary Search result for number x = " << x << ": " << result;	
 	cout << endl << endl;	
