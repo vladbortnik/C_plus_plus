@@ -2,11 +2,6 @@
 #include <iomanip>
 using namespace std;
 
-void swap(int &x, int &y){
-	int temp = x;
-	x = y;
-	y = temp;
-}
 
 int birary_search_rec(int a[], int from, int to, int target){
 	int middleIndex = (from + to)/2;
@@ -38,6 +33,12 @@ void print_array(int a[], int n){
 		}
 	}
 	cout << endl;
+}
+
+void swap(int &x, int &y){
+	int temp = x;
+	x = y;
+	y = temp;
 }
 
 void sort(int a[], int n){
