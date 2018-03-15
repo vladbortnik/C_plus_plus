@@ -4,6 +4,7 @@
 #include "calendar.h"
 using namespace std;
 
+
 void displayYearCalendar(int yyyy){
 	Calendar cal;
 	try{
@@ -22,11 +23,12 @@ void displayYearCalendar(int yyyy){
 
 int main(){
 	
+	
 	int yyyy;
 	cout << "Please enter a year (YYYY) to print: ";
 	cin >> yyyy;
 	
 	displayYearCalendar(yyyy);
-	
+
 	return 0;
 }
