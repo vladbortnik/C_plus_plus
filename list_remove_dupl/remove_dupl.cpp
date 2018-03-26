@@ -7,7 +7,6 @@ void fill_list(list<int> &l){
 	list<int>::iterator it;
 	for(it = l.begin(); it != l.end(); it++){
 		*it = rand()%10;
-		cout << *it << endl;
 	}
 }
 
