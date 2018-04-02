@@ -1,4 +1,4 @@
-// Odnosvyazniy spisok (insert ellement)
+// Single Linked List (insert ellement)
 
 
 #include <iostream>
